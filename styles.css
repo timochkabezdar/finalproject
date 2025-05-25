@@ -133,3 +133,31 @@ main {
   overflow-y: auto;
   max-height: 500px;
 }
+
+/* Стили для формы и элементов */
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #6d5d8b;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #c2b9e8;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background: #f9f8fc;
+  color: #4a4a6a;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
