@@ -84,3 +84,40 @@ main {
   color: #b39ddb; /* светлый сиреневый */
   margin-bottom: 0.5rem;
 }
+
+/* Конструктор форм */
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.toolbox {
+  flex: 0 0 200px;
+  background: #faf9fc; /* очень светлый сиреневый */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(122, 109, 158, 0.1);
+}
+
+.toolbox h3 {
+  margin-top: 0;
+  color: #6d5d8b;
+}
+
+.draggable {
+  background: #d6c9f8; /* светлый лавандовый */
+  border: 1px solid #8c7ae6; /* насыщенный лавандовый */
+  border-radius: 4px;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  cursor: grab;
+  user-select: none;
+  text-align: center;
+  font-weight: 600;
+  color: #5a4e8a;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
