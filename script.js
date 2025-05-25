@@ -93,7 +93,6 @@ formPreview.addEventListener('dragover', (e) => { // Назначение соб
             elementWrapper.appendChild(select); // select
             elementWrapper.appendChild(addOptionBtn); // кнопка
             break; // Выход из case
-        }
         case 'checkbox': { // Обработка группы чекбоксов
             // Создаём метку для группы чекбоксов
             const label = document.createElement('label'); // Метка
@@ -145,3 +144,102 @@ formPreview.addEventListener('dragover', (e) => { // Назначение соб
                 // Добавляем вариант в контейнер
                 optionsContainer.appendChild(optionWrapper); // Вставка варианта
             };
+// Создаём кнопку для добавления варианта чекбокса
+            const addOptionBtn = document.createElement('button'); // Кнопка
+            addOptionBtn.type = 'button'; // Тип
+            addOptionBtn.textContent = 'Добавить вариант'; // Текст
+
+
+            // Обработчик для добавления варианта
+            addOptionBtn.addEventListener('click', () => { // Обработка
+                const optionText = prompt('Введите текст варианта:'); // Запрос текста
+                if (optionText) addCheckboxOption(optionText); // Добавление варианта
+            });
+
+
+            // Добавляем в обёртку: метку, контейнер вариантов и кнопку
+            elementWrapper.appendChild(label); // Метка
+            elementWrapper.appendChild(optionsContainer); // Контейнер
+            elementWrapper.appendChild(addOptionBtn); // Кнопка
+            break; // Выход из case
+        }
+        case 'radio': { // Обработка группы радиокнопок
+            // Создаём метку для группы радио
+            const label = document.createElement('label'); // Метка
+            label.textContent = 'Радио-кнопка'; // Текст
+
+
+            // Создаём контейнер для вариантов радио
+            const optionsContainer = document.createElement('div'); // Контейнер
+            optionsContainer.className = 'options-container'; // Класс
+
+
+            // Функция для добавления варианта радио
+            function addRadioOption(text) { // Функция
+                const optionWrapper = document.createElement('div'); // Обёртка
+                optionWrapper.className = 'option-wrapper'; // Класс
+
+
+                // Создаём input типа radio
+                const input = document.createElement('input'); // Радио
+                input.type = 'radio'; // Тип
+                input.name = `radioGroup${elementCount}`; // Группа
+
+
+                // Создаём метку для варианта
+                const optionLabel = document.createElement('label'); // Метка
+                optionLabel.textContent = text; // Текст
+
+
+                // Создаём кнопку для удаления варианта
+                const removeOptionBtn = document.createElement('button'); // Кнопка
+                removeOptionBtn.type = 'button'; // Тип
+                removeOptionBtn.textContent = '×'; // Значение
+                removeOptionBtn.title = 'Удалить вариант'; // Подсказка
+                removeOptionBtn.className = 'remove-option-btn'; // Класс
+
+
+                // Обработчик для удаления варианта
+                removeOptionBtn.addEventListener('click', () => { // Обработка
+                    optionWrapper.remove(); // Удаление варианта
+                });
+
+
+                // Собираем вариант: радио + метка + кнопка
+                optionWrapper.appendChild(input); // Радио
+                optionWrapper.appendChild(optionLabel); // Метка
+                optionWrapper.appendChild(removeOptionBtn); // Кнопка
+
+
+                // Добавляем вариант в контейнер
+                optionsContainer.appendChild(optionWrapper); // Вставка варианта
+            }
+
+
+            // Создаём кнопку для добавления варианта радио
+            const addOptionBtn = document.createElement('button'); // Кнопка
+            addOptionBtn.type = 'button'; // Тип
+            addOptionBtn.textContent = 'Добавить вариант'; // Текст
+
+
+            // Обработчик для добавления варианта
+            addOptionBtn.addEventListener('click', () => { // Обработка
+                const optionText = prompt('Введите текст варианта:'); // Запрос текста
+                if (optionText) addRadioOption(optionText); // Добавление варианта
+            });
+
+
+            // Вставляем в обёртку: метку, контейнер вариантов и кнопку
+            elementWrapper.appendChild(label); // Метка
+            elementWrapper.appendChild(optionsContainer); // Контейнер
+            elementWrapper.appendChild(addOptionBtn); // Кнопка
+            break; // Выход из case
+        }
+
+    // В конец обёртки добавляем кнопку удаления элемента
+    elementWrapper.appendChild(removeBtn); // Кнопка удаления
+
+
+    // Добавляем созданный элемент формы в контейнер формы
+    form.appendChild(elementWrapper); // Вставка элемента формы
+    }
