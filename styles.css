@@ -62,3 +62,11 @@ main {
   margin-bottom: 1rem;
   color: #5e5e80;
 }
+
+/* Карточки фич */
+.features {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
