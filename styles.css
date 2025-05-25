@@ -161,3 +161,23 @@ form input[type="radio"] {
   margin-right: 0.5rem;
   vertical-align: middle;
 }
+
+/* Секция вывода HTML */
+.output-section {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(122, 109, 158, 0.1);
+}
+
+.output {
+  background: #f3f1fa; /* очень светлый сиренево-голубой */
+  color: #4a4a6a;
+  padding: 1rem;
+  border-radius: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-family: monospace;
+  margin-bottom: 1rem;
+}
