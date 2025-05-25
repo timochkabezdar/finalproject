@@ -60,7 +60,7 @@ formPreview.addEventListener('dragover', (e) => { // Назначение соб
             elementWrapper.appendChild(label); // Вставка метки
             elementWrapper.appendChild(input); // Вставка input
             break; // Выход из case
-        }
+        };
         case 'textarea': { // Обработка для текстовой области
             // Создаём метку для textarea
             const label = document.createElement('label'); // Создание label
@@ -78,4 +78,13 @@ formPreview.addEventListener('dragover', (e) => { // Назначение соб
             elementWrapper.appendChild(label); // Вставка метки
             elementWrapper.appendChild(textarea); // Вставка textarea
             break; // Выход из case
-        }
+        };
+    // Создаём кнопку для удаления этого элемента формы
+    const removeBtn = document.createElement('button'); // Создание кнопки удаления
+    removeBtn.type = 'button'; // Установка типа кнопки
+    removeBtn.textContent = 'Удалить элемент'; // Текст на кнопке
+    removeBtn.className = 'remove-element-btn'; // Назначение класса для стилизации
+    // Назначаем обработчик клика для удаления элемента
+    removeBtn.addEventListener('click', () => { // Обработка клика по кнопке удаления
+        elementWrapper.remove(); // Удаление обёртки полностью
+    });
