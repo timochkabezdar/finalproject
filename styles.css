@@ -121,3 +121,15 @@ main {
 .draggable:active {
   cursor: grabbing;
 }
+
+/* Область формы */
+.form-area {
+  flex: 1 1 auto;
+  background: #ffffff; /* белый */
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 300px;
+  box-shadow: 0 2px 6px rgba(122, 109, 158, 0.1);
+  overflow-y: auto;
+  max-height: 500px;
+}
