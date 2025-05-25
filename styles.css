@@ -55,3 +55,10 @@ main {
 .section {
   margin-bottom: 3rem;
 }
+
+/* Блок "О проекте" */
+.about p {
+  max-width: 700px;
+  margin-bottom: 1rem;
+  color: #5e5e80;
+}
