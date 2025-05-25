@@ -1,0 +1,12 @@
+/* Общие стили */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f5f7fa; /* очень светлый голубой */
+  color: #4a4a6a; /* тёмно-лиловый */
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0.5em 0;
+}
