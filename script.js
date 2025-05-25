@@ -88,3 +88,60 @@ formPreview.addEventListener('dragover', (e) => { // Назначение соб
     removeBtn.addEventListener('click', () => { // Обработка клика по кнопке удаления
         elementWrapper.remove(); // Удаление обёртки полностью
     });
+       // Добавляем метку, select и кнопку в обёртку
+            elementWrapper.appendChild(label); // Метка
+            elementWrapper.appendChild(select); // select
+            elementWrapper.appendChild(addOptionBtn); // кнопка
+            break; // Выход из case
+        }
+        case 'checkbox': { // Обработка группы чекбоксов
+            // Создаём метку для группы чекбоксов
+            const label = document.createElement('label'); // Метка
+            label.textContent = 'Чекбокс'; // Текст
+
+
+            // Создаём контейнер для вариантов чекбоксов
+            const optionsContainer = document.createElement('div'); // Контейнер варианта
+            optionsContainer.className = 'options-container'; // Назначение класса
+
+
+            // Функция для добавления варианта чекбокса
+            function addCheckboxOption(text) { // Функция добавления варианта
+                const optionWrapper = document.createElement('div'); // Обёртка варианта
+                optionWrapper.className = 'option-wrapper'; // Класс
+
+
+                // Создаём input типа checkbox
+                const input = document.createElement('input'); // Чекбокс
+                input.type = 'checkbox'; // Тип
+                input.name = `checkboxGroup${elementCount}`; // Группа
+
+
+                // Создаём метку для варианта
+                const optionLabel = document.createElement('label'); // Метка
+                optionLabel.textContent = text; // Текст
+
+
+                // Создаём кнопку для удаления варианта
+                const removeOptionBtn = document.createElement('button'); // Кнопка
+                removeOptionBtn.type = 'button'; // Тип
+                removeOptionBtn.textContent = '×'; // Значение
+                removeOptionBtn.title = 'Удалить вариант'; // Подсказка
+                removeOptionBtn.className = 'remove-option-btn'; // Класс
+
+
+                // Обработчик для удаления варианта
+                removeOptionBtn.addEventListener('click', () => { // Обработка клика
+                    optionWrapper.remove(); // Удаление варианта
+                });
+
+
+                // Собираем вариант: чекбокс + метка + кнопка
+                optionWrapper.appendChild(input); // Чекбокс
+                optionWrapper.appendChild(optionLabel); // Метка
+                optionWrapper.appendChild(removeOptionBtn); // Кнопка
+
+
+                // Добавляем вариант в контейнер
+                optionsContainer.appendChild(optionWrapper); // Вставка варианта
+            };
