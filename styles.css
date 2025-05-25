@@ -70,3 +70,17 @@ main {
   margin-top: 1rem;
   flex-wrap: wrap;
 }
+
+.feature-card {
+  background: #ffffff; /* чистый белый */
+  border-radius: 8px;
+  padding: 1rem;
+  flex: 1 1 200px;
+  box-shadow: 0 2px 8px rgba(122, 109, 158, 0.15);
+  text-align: center;
+}
+
+.feature-card i {
+  color: #b39ddb; /* светлый сиреневый */
+  margin-bottom: 0.5rem;
+}
