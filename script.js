@@ -40,3 +40,42 @@ formPreview.addEventListener('dragover', (e) => { // Назначение соб
     elementWrapper.className = 'form-element-wrapper'; // Назначение класса для стилизации
     elementWrapper.dataset.type = type; // Сохранение типа элемента в дата-атрибут
     elementWrapper.dataset.id = elementCount; // Сохранение уникального id в дата-атрибут
+// В зависимости от типа создаём соответствующий элемент формы
+    switch (type) {
+        case 'text': { // Обработка для текстового поля
+            // Создаём метку для текстового поля
+            const label = document.createElement('label'); // Создание элемента label
+            label.htmlFor = `text${elementCount}`; // Связь с input по id
+            label.textContent = 'Текстовое поле'; // Текст метки
+
+
+            // Создаём поле ввода текста
+            const input = document.createElement('input'); // Создание элемента input
+            input.type = 'text'; // Установка типа input
+            input.id = `text${elementCount}`; // Уникальный id
+            input.name = `text${elementCount}`; // Имя для формы
+            input.placeholder = 'Введите текст'; // Placeholder
+
+            // Добавляем метку и поле в обёртку
+            elementWrapper.appendChild(label); // Вставка метки
+            elementWrapper.appendChild(input); // Вставка input
+            break; // Выход из case
+        }
+        case 'textarea': { // Обработка для текстовой области
+            // Создаём метку для textarea
+            const label = document.createElement('label'); // Создание label
+            label.htmlFor = `textarea${elementCount}`; // Связь с textarea
+            label.textContent = 'Текстовая область'; // Текст метки
+
+
+            // Создаём сам textarea
+            const textarea = document.createElement('textarea'); // Создание textarea
+            textarea.id = `textarea${elementCount}`; // Уникальный id
+            textarea.name = `textarea${elementCount}`; // Имя
+
+
+            // Добавляем метку и textarea в обёртку
+            elementWrapper.appendChild(label); // Вставка метки
+            elementWrapper.appendChild(textarea); // Вставка textarea
+            break; // Выход из case
+        }
