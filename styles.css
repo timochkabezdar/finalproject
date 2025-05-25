@@ -181,3 +181,23 @@ form input[type="radio"] {
   font-family: monospace;
   margin-bottom: 1rem;
 }
+
+/* Кнопки */
+button {
+  background-color: #b39ddb; /* светлый сиреневый */
+  border: none;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  margin-right: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(179, 157, 219, 0.5);
+}
+
+button:hover {
+  background-color: #8c7ae6; /* насыщенный лавандовый */
+  box-shadow: 0 4px 8px rgba(140, 122, 230, 0.7);
+}
