@@ -27,3 +27,16 @@ document.querySelectorAll('.draggable').forEach(item => { // Выбор всех
 formPreview.addEventListener('dragover', (e) => { // Назначение события при перетаскивании над областью
     e.preventDefault(); // Разрешение сброса, предотвращая стандартное поведение
 });
+    // Получаем тип перетаскиваемого элемента из dataTransfer
+    const type = e.dataTransfer.getData('text/plain'); // Получение типа элемента
+
+
+    // Увеличиваем счётчик для уникальных id элементов
+    elementCount++; // Увеличение счётчика для нового элемента
+
+
+    // Создаём обёртку для нового элемента формы
+    const elementWrapper = document.createElement('div'); // Создание контейнера для элемента формы
+    elementWrapper.className = 'form-element-wrapper'; // Назначение класса для стилизации
+    elementWrapper.dataset.type = type; // Сохранение типа элемента в дата-атрибут
+    elementWrapper.dataset.id = elementCount; // Сохранение уникального id в дата-атрибут
