@@ -50,3 +50,8 @@ main {
   margin: 2rem auto;
   padding: 0 1rem;
 }
+
+/* Секции */
+.section {
+  margin-bottom: 3rem;
+}
