@@ -201,3 +201,102 @@ button:hover {
   background-color: #8c7ae6; /* насыщенный лавандовый */
   box-shadow: 0 4px 8px rgba(140, 122, 230, 0.7);
 }
+
+/* Футер */
+.footer {
+  background: #e9e7f1; /* светло-сиреневый */
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  color: #6d5d8b;
+  border-top: 1px solid #c2b9e8;
+  margin-top: 3rem;
+}
+
+.form-element-wrapper {
+  border: 1px solid #c2b9e8;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background: #f9f8fc;
+  position: relative;
+}
+
+.form-element-wrapper label {
+  font-weight: 600;
+  color: #6d5d8b;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.options-container {
+  margin: 0.5rem 0 1rem 1rem;
+}
+
+.option-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.option-wrapper label {
+  margin-left: 0.4rem;
+  flex-grow: 1;
+}
+
+.remove-option-btn {
+  background: #e57373;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 22px;
+  height: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  line-height: 18px;
+  padding: 0;
+  user-select: none;
+}
+
+.remove-option-btn:hover {
+  background: #d32f2f;
+}
+
+.remove-element-btn {
+  background: #8c7ae6;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.remove-element-btn:hover {
+  background: #6d5d8b;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: #4caf50; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
