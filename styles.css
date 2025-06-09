@@ -1,0 +1,303 @@
+/* Общие стили */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f5f7fa; /* очень светлый голубой */
+  color: #4a4a6a; /* тёмно-лиловый */
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0.5em 0;
+}
+
+a {
+  color: black; /* мягкий лавандовый */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Хедер */
+.header {
+  background-color: #8c7ae6; /* нежный лавандовый */
+  color: #f5f5f7;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(140, 122, 230, 0.3);
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.header nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Основной контент */
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Секции */
+.section {
+  margin-bottom: 3rem;
+}
+
+/* Блок "О проекте" */
+.about p {
+  max-width: 700px;
+  margin-bottom: 1rem;
+  color: #5e5e80;
+}
+
+/* Карточки фич */
+.features {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #ffffff; /* чистый белый */
+  border-radius: 8px;
+  padding: 1rem;
+  flex: 1 1 200px;
+  box-shadow: 0 2px 8px rgba(122, 109, 158, 0.15);
+  text-align: center;
+}
+
+.feature-card i {
+  color: #b39ddb; /* светлый сиреневый */
+  margin-bottom: 0.5rem;
+}
+
+/* Конструктор форм */
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.toolbox {
+  flex: 0 0 200px;
+  background: #faf9fc; /* очень светлый сиреневый */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(122, 109, 158, 0.1);
+}
+
+.toolbox h3 {
+  margin-top: 0;
+  color: #6d5d8b;
+}
+
+.draggable {
+  background: #d6c9f8; /* светлый лавандовый */
+  border: 1px solid #8c7ae6; /* насыщенный лавандовый */
+  border-radius: 4px;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  cursor: grab;
+  user-select: none;
+  text-align: center;
+  font-weight: 600;
+  color: #5a4e8a;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+/* Область формы */
+.form-area {
+  flex: 1 1 auto;
+  background: #ffffff; /* белый */
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 300px;
+  box-shadow: 0 2px 6px rgba(122, 109, 158, 0.1);
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+/* Стили для формы и элементов */
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #6d5d8b;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #c2b9e8;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background: #f9f8fc;
+  color: #4a4a6a;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Секция вывода HTML */
+.output-section {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(122, 109, 158, 0.1);
+}
+
+.output {
+  background: #f3f1fa; /* очень светлый сиренево-голубой */
+  color: #4a4a6a;
+  padding: 1rem;
+  border-radius: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-family: monospace;
+  margin-bottom: 1rem;
+}
+
+/* Кнопки */
+button {
+  background-color: #b39ddb; /* светлый сиреневый */
+  border: none;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  margin-right: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(179, 157, 219, 0.5);
+}
+
+button:hover {
+  background-color: #8c7ae6; /* насыщенный лавандовый */
+  box-shadow: 0 4px 8px rgba(140, 122, 230, 0.7);
+}
+
+/* Футер */
+.footer {
+  background: #e9e7f1; /* светло-сиреневый */
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  color: #6d5d8b;
+  border-top: 1px solid #c2b9e8;
+  margin-top: 3rem;
+}
+
+.form-element-wrapper {
+  border: 1px solid #c2b9e8;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background: #f9f8fc;
+  position: relative;
+}
+
+.form-element-wrapper label {
+  font-weight: 600;
+  color: #6d5d8b;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.options-container {
+  margin: 0.5rem 0 1rem 1rem;
+}
+
+.option-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.option-wrapper label {
+  margin-left: 0.4rem;
+  flex-grow: 1;
+}
+
+.remove-option-btn {
+  background: #e57373;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 22px;
+  height: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  line-height: 18px;
+  padding: 0;
+  user-select: none;
+}
+
+.remove-option-btn:hover {
+  background: #d32f2f;
+}
+
+.remove-element-btn {
+  background: #8c7ae6;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.remove-element-btn:hover {
+  background: #6d5d8b;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: #4caf50; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
